@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUsingSQLLite.BookingAppHomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="booking.png" HeightRequest="100" WidthRequest="150"/>
+            <StackLayout>
+                <Label Text="Them thanh pho moi" HorizontalOptions="Start"/>
+                <Button x:Name="addNewCity" Text="Them moi" Clicked="addNewCity_Clicked"/>
+            </StackLayout>
+            
+            <ListView x:Name="lstCity" IsPullToRefreshEnabled="True" ItemSelected="lstCity_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding Img}" Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout>
+                <Label Text="Them khach san" HorizontalOptions="Start"/>
+                <Button x:Name="addNewHotel" Text="Them moi" Clicked="addNewHotel_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

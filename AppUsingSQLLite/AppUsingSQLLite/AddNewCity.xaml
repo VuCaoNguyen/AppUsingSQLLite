@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUsingSQLLite.AddNewCity">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Ten thanh pho: " Grid.Column="0" Grid.Row="0"/>
+            <Entry Keyboard="Text" Grid.Column="1" Grid.Row="0" x:Name="cityName"/>
+
+
+            <Label Text="Hinh: " Grid.Column="0" Grid.Row="1"/>
+            <Entry Keyboard="Text" Grid.Column="1" Grid.Row="1" x:Name="cityImg"/>
+
+            <Button x:Name="addCity" Text="Them moi" Clicked="addCity_Clicked" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

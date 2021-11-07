@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUsingSQLLite.AddNewHotelPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Ten thanh pho: " Grid.Column="0" Grid.Row="0"/>
+            <Entry Keyboard="Text" Grid.Column="1" Grid.Row="0" x:Name="hotelName"/>
+
+
+            <Label Text="Hinh: " Grid.Column="0" Grid.Row="1"/>
+            <Entry Keyboard="Text" Grid.Column="1" Grid.Row="1" x:Name="hotelImg"/>
+            <Picker x:Name="pickCity" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                    ItemsSource="{Binding Id}" ItemDisplayBinding="{Binding Name}" Title="Chọn thành phố"/>
+            <Button x:Name="addHotel" Text="Them moi" Clicked="addHotel_Clicked" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
